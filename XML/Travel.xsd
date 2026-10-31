@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+
+    <xs:simpleType name="AgencyIdType">
+        <xs:restriction base="xs:ID">
+            <xs:pattern value="ag\d+"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="AgencyRefType">
+        <xs:restriction base="xs:IDREF">
+            <xs:pattern value="ag\d+"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="PackageIdType">
+        <xs:restriction base="xs:ID">
+            <xs:pattern value="pkg\d+"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="AgencyNameType">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="2"/>
+            <xs:maxLength value="100"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="VoucherType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="holiday"/>
+            <xs:enumeration value="weekend"/>
+            <xs:enumeration value="adventure"/>
+            <xs:enumeration value="cruise"/>
+            <xs:enumeration value="excursion"/>
+            <xs:enumeration value="pilgrimage"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="CountryType">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="2"/>
+            <xs:maxLength value="60"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="DaysType">
+        <xs:restriction base="xs:positiveInteger">
+            <xs:minInclusive value="1"/>
+            <xs:maxInclusive value="365"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="NightsType">
+        <xs:restriction base="xs:nonNegativeInteger">
+            <xs:maxInclusive value="364"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="TransportType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="plane"/>
+            <xs:enumeration value="train"/>
+            <xs:enumeration value="car"/>
+            <xs:enumeration value="ship"/>
+            <xs:enumeration value="ferry"/>
+            <xs:enumeration value="bus"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="CurrencyType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="EUR"/>
+            <xs:enumeration value="USD"/>
+            <xs:enumeration value="CAD"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="AmountType">
+        <xs:restriction base="xs:decimal">
+            <xs:minExclusive value="0"/>
+            <xs:fractionDigits value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="IncludedItemType">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+            <xs:maxLength value="100"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="StarsType">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="1"/>
+            <xs:maxInclusive value="5"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="MealType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="BB"/>
+            <xs:enumeration value="HB"/>
+            <xs:enumeration value="FB"/>
+            <xs:enumeration value="AI"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="RoomCapacityType">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="1"/>
+            <xs:maxInclusive value="3"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="AgencyComplexType">
+        <xs:simpleContent>
+            <xs:extension base="AgencyNameType">
+                <xs:attribute name="agency_id" type="AgencyIdType" use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="AgenciesType">
+        <xs:sequence>
+            <xs:element name="agency" type="AgencyComplexType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="DurationType">
+        <xs:sequence>
+            <xs:element name="days" type="DaysType"/>
+            <xs:element name="nights" type="NightsType"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="IncludedType">
+        <xs:sequence>
+            <xs:element name="item" type="IncludedItemType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="CostType">
+        <xs:sequence>
+            <xs:element name="amount" type="AmountType"/>
+            <xs:element name="included" type="IncludedType"/>
+        </xs:sequence>
+        <xs:attribute name="currency" type="CurrencyType" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="HotelType">
+        <xs:sequence>
+            <xs:element name="stars" type="StarsType"/>
+            <xs:element name="meal" type="MealType"/>
+            <xs:element name="room_capacity" type="RoomCapacityType"/>
+            <xs:element name="tv" type="xs:boolean"/>
+            <xs:element name="air_conditioning" type="xs:boolean"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="PackageType">
+        <xs:sequence>
+            <xs:element name="type" type="VoucherType"/>
+            <xs:element name="country" type="CountryType"/>
+            <xs:element name="duration" type="DurationType"/>
+            <xs:element name="transport" type="TransportType"/>
+            <xs:element name="cost" type="CostType"/>
+            <xs:element name="hotel" type="HotelType"/>
+        </xs:sequence>
+        <xs:attribute name="package_id" type="PackageIdType" use="required"/>
+        <xs:attribute name="agency_ref" type="AgencyRefType" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="PackagesType">
+        <xs:sequence>
+            <xs:element name="package" type="PackageType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="tourist_voucher">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="title" type="xs:string"/>
+                <xs:element name="traveling_agencies" type="AgenciesType"/>
+                <xs:element name="packages" type="PackagesType"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tourist_voucher xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:noNamespaceSchemaLocation="Travel.xsd">
+    <title>Travel Packages</title>
+    <traveling_agencies>
+        <agency agency_id="ag1">PGL Travel</agency>
+        <agency agency_id="ag2">Blast Travel</agency>
+        <agency agency_id="ag3">International Travel</agency>
+        <agency agency_id="ag4">Major Travel</agency>
+        <agency agency_id="ag5">ESL Travel</agency>
+    </traveling_agencies>
+    <packages>
+        <package package_id="pkg1" agency_ref="ag1">
+            <type>holiday</type>
+            <country>UK</country>
+            <duration>
+                <days>14</days>
+                <nights>13</nights>
+            </duration>
+            <transport>plane</transport>
+            <cost currency="EUR">
+                <amount>2800</amount>
+                <included>
+                    <item>flight</item>
+                    <item>hotel</item>
+                    <item>insurance</item>
+                </included>
+            </cost>
+            <hotel>
+                <stars>3</stars>
+                <meal>HB</meal>
+                <room_capacity>2</room_capacity>
+                <tv>true</tv>
+                <air_conditioning>true</air_conditioning>
+            </hotel>
+        </package>
+        <package package_id="pkg2" agency_ref="ag2">
+            <type>weekend</type>
+            <country>Italy</country>
+            <duration>
+                <days>7</days>
+                <nights>6</nights>
+            </duration>
+            <transport>train</transport>
+            <cost currency="EUR">
+                <amount>1750</amount>
+                <included>
+                    <item>train</item>
+                    <item>hotel</item>
+                    <item>museum passes</item>
+                </included>
+            </cost>
+            <hotel>
+                <stars>4</stars>
+                <meal>BB</meal>
+                <room_capacity>2</room_capacity>
+                <tv>true</tv>
+                <air_conditioning>true</air_conditioning>
+            </hotel>
+        </package>
+        <package package_id="pkg3" agency_ref="ag3">
+            <type>adventure</type>
+            <country>Japan</country>
+            <duration>
+                <days>10</days>
+                <nights>9</nights>
+            </duration>
+            <transport>plane</transport>
+            <cost currency="EUR">
+                <amount>3200</amount>
+                <included>
+                    <item>flight</item>
+                    <item>hotel</item>
+                    <item>local guide</item>
+                </included>
+            </cost>
+            <hotel>
+                <stars>4</stars>
+                <meal>HB</meal>
+                <room_capacity>2</room_capacity>
+                <tv>true</tv>
+                <air_conditioning>false</air_conditioning>
+            </hotel>
+        </package>
+        <package package_id="pkg4" agency_ref="ag4">
+            <type>holiday</type>
+            <country>Greece</country>
+            <duration>
+                <days>8</days>
+                <nights>7</nights>
+            </duration>
+            <transport>ferry</transport>
+            <cost currency="EUR">
+                <amount>2100</amount>
+                <included>
+                    <item>ferry</item>
+                    <item>hotel</item>
+                    <item>meals</item>
+                </included>
+            </cost>
+            <hotel>
+                <stars>3</stars>
+                <meal>AI</meal>
+                <room_capacity>3</room_capacity>
+                <tv>true</tv>
+                <air_conditioning>true</air_conditioning>
+            </hotel>
+        </package>
+        <package package_id="pkg5" agency_ref="ag5">
+            <type>holiday</type>
+            <country>France</country>
+            <duration>
+                <days>4</days>
+                <nights>3</nights>
+            </duration>
+            <transport>train</transport>
+            <cost currency="EUR">
+                <amount>980</amount>
+                <included>
+                    <item>train</item>
+                    <item>hotel</item>
+                    <item>breakfast</item>
+                </included>
+            </cost>
+            <hotel>
+                <stars>4</stars>
+                <meal>BB</meal>
+                <room_capacity>2</room_capacity>
+                <tv>true</tv>
+                <air_conditioning>true</air_conditioning>
+            </hotel>
+        </package>
+        <package package_id="pkg6" agency_ref="ag1">
+            <type>holiday</type>
+            <country>Kenya</country>
+            <duration>
+                <days>12</days>
+                <nights>11</nights>
+            </duration>
+            <transport>plane</transport>
+            <cost currency="EUR">
+                <amount>4600</amount>
+                <included>
+                    <item>flight</item>
+                    <item>lodge</item>
+                    <item>travel insurance</item>
+                </included>
+            </cost>
+            <hotel>
+                <stars>4</stars>
+                <meal>FB</meal>
+                <room_capacity>2</room_capacity>
+                <tv>false</tv>
+                <air_conditioning>true</air_conditioning>
+            </hotel>
+        </package>
+        <package package_id="pkg7" agency_ref="ag2">
+            <type>holiday</type>
+            <country>Austria</country>
+            <duration>
+                <days>6</days>
+                <nights>5</nights>
+            </duration>
+            <transport>bus</transport>
+            <cost currency="EUR">
+                <amount>1650</amount>
+                <included>
+                    <item>bus</item>
+                    <item>hotel</item>
+                    <item>ski pass</item>
+                </included>
+            </cost>
+            <hotel>
+                <stars>3</stars>
+                <meal>HB</meal>
+                <room_capacity>2</room_capacity>
+                <tv>true</tv>
+                <air_conditioning>false</air_conditioning>
+            </hotel>
+        </package>
+        <package package_id="pkg8" agency_ref="ag3">
+            <type>cruise</type>
+            <country>Norway</country>
+            <duration>
+                <days>9</days>
+                <nights>8</nights>
+            </duration>
+            <transport>ship</transport>
+            <cost currency="EUR">
+                <amount>2850</amount>
+                <included>
+                    <item>cruise cabin</item>
+                    <item>port transfers</item>
+                    <item>meals</item>
+                </included>
+            </cost>
+            <hotel>
+                <stars>5</stars>
+                <meal>AI</meal>
+                <room_capacity>2</room_capacity>
+                <tv>true</tv>
+                <air_conditioning>true</air_conditioning>
+            </hotel>
+        </package>
+        <package package_id="pkg9" agency_ref="ag4">
+            <type>weekend</type>
+            <country>Canada</country>
+            <duration>
+                <days>14</days>
+                <nights>13</nights>
+            </duration>
+            <transport>car</transport>
+            <cost currency="CAD">
+                <amount>3400</amount>
+                <included>
+                    <item>car rental</item>
+                    <item>hotel</item>
+                    <item>insurance</item>
+                </included>
+            </cost>
+            <hotel>
+                <stars>3</stars>
+                <meal>BB</meal>
+                <room_capacity>3</room_capacity>
+                <tv>true</tv>
+                <air_conditioning>false</air_conditioning>
+            </hotel>
+        </package>
+        <package package_id="pkg10" agency_ref="ag5">
+            <type>weekend</type>
+            <country>Thailand</country>
+            <duration>
+                <days>11</days>
+                <nights>10</nights>
+            </duration>
+            <transport>plane</transport>
+            <cost currency="EUR">
+                <amount>2550</amount>
+                <included>
+                    <item>flight</item>
+                    <item>resort</item>
+                    <item>spa treatments</item>
+                </included>
+            </cost>
+            <hotel>
+                <stars>5</stars>
+                <meal>FB</meal>
+                <room_capacity>2</room_capacity>
+                <tv>true</tv>
+                <air_conditioning>true</air_conditioning>
+            </hotel>
+        </package>
+        <package package_id="pkg11" agency_ref="ag1">
+            <type>weekend</type>
+            <country>Iceland</country>
+            <duration>
+                <days>5</days>
+                <nights>4</nights>
+            </duration>
+            <transport>plane</transport>
+            <cost currency="EUR">
+                <amount>1900</amount>
+                <included>
+                    <item>flight</item>
+                    <item>guesthouse</item>
+                    <item>guided excursions</item>
+                </included>
+            </cost>
+            <hotel>
+                <stars>3</stars>
+                <meal>BB</meal>
+                <room_capacity>2</room_capacity>
+                <tv>false</tv>
+                <air_conditioning>false</air_conditioning>
+            </hotel>
+        </package>
+    </packages>
+</tourist_voucher>
