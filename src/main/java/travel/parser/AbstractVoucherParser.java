@@ -3,9 +3,9 @@ package travel.parser;
 import java.io.InputStream;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
 import travel.model.VoucherCatalog;
 
-/** Спільна частина парсерів: логування, обгортання помилок, збирання результату. */
 public abstract class AbstractVoucherParser implements VoucherParser {
 
     private final Logger log = Logger.getLogger(getClass().getName());
@@ -25,6 +25,5 @@ public abstract class AbstractVoucherParser implements VoucherParser {
         }
     }
 
-    /** Читає XML конкретною технологією (SAX / StAX / DOM) і надсилає події в handler. */
     protected abstract void process(InputStream in, VoucherEventHandler handler) throws Exception;
 }

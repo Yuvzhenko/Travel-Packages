@@ -1,6 +1,6 @@
 package travel.util;
 
-/** Перетворення текстових значень з XML на константи enum (без урахування регістру). */
+// Перетворення текстових значень з XML на константи enum 
 public final class EnumParser {
 
     private EnumParser() { }

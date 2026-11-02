@@ -1,0 +1,11 @@
+travel\parser\AbstractVoucherParserTest.class
+travel\validation\XsdValidatorTest.class
+travel\parser\ParsersAgreementTest.class
+travel\TestFiles.class
+travel\util\EnumParserTest.class
+travel\parser\DomVoucherParserTest.class
+travel\parser\SaxVoucherParserTest.class
+travel\model\VoucherComparatorsTest.class
+travel\parser\StaxVoucherParserTest.class
+travel\parser\VoucherAssemblerTest.class
+travel\transform\XslTransformerTest.class

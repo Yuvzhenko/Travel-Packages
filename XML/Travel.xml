@@ -210,7 +210,7 @@
                 <nights>13</nights>
             </duration>
             <transport>car</transport>
-            <cost currency="CAD">
+            <cost currency="EUR">
                 <amount>3400</amount>
                 <included>
                     <item>car rental</item>

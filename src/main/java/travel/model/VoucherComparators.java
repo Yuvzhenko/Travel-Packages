@@ -2,7 +2,6 @@ package travel.model;
 
 import java.util.Comparator;
 
-/** Компаратори для сортування колекції путівок. */
 public final class VoucherComparators {
 
     public static final Comparator<TouristVoucher> BY_COST =

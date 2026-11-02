@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tourist_voucher>
+    <title>Sample</title>
+    <traveling_agencies>
+        <agency agency_id="ag1">Alpha Tours</agency>
+        <agency agency_id="ag2">Beta Travel</agency>
+    </traveling_agencies>
+    <packages>
+        <package package_id="pkg1" agency_ref="ag1">
+            <type>holiday</type>
+            <country>Greece</country>
+            <duration><days>8</days><nights>7</nights></duration>
+            <transport>plane</transport>
+            <cost currency="EUR">
+                <amount>2100.50</amount>
+                <included><item>flight</item><item>transfer</item></included>
+            </cost>
+            <hotel>
+                <stars>4</stars><meal>AI</meal><room_capacity>2</room_capacity>
+                <tv>true</tv><air_conditioning>false</air_conditioning>
+            </hotel>
+        </package>
+        <package package_id="pkg2" agency_ref="ag2">
+            <type>weekend</type>
+            <country>Italy</country>
+            <duration><days>3</days><nights>2</nights></duration>
+            <transport>train</transport>
+            <cost currency="USD">
+                <amount>500</amount>
+                <included><item>tickets</item></included>
+            </cost>
+            <hotel>
+                <stars>3</stars><meal>BB</meal><room_capacity>1</room_capacity>
+                <tv>false</tv><air_conditioning>true</air_conditioning>
+            </hotel>
+        </package>
+        <package package_id="pkg3" agency_ref="ag1">
+            <type>holiday</type>
+            <country>Spain</country>
+            <duration><days>10</days><nights>9</nights></duration>
+            <transport>plane</transport>
+            <cost currency="EUR">
+                <amount>1800</amount>
+                <included><item>flight</item></included>
+            </cost>
+            <hotel>
+                <stars>5</stars><meal>HB</meal><room_capacity>3</room_capacity>
+                <tv>true</tv><air_conditioning>true</air_conditioning>
+            </hotel>
+        </package>
+    </packages>
+</tourist_voucher>

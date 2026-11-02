@@ -1,6 +1,5 @@
 package travel.model;
 
-/** Туристична путівка (елемент {@code <package>}). */
 public record TouristVoucher(
         String id,
         String agencyId,

@@ -5,6 +5,7 @@ import java.io.OutputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.logging.Logger;
+
 import javax.xml.XMLConstants;
 import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerException;
@@ -12,7 +13,7 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.stream.StreamResult;
 import javax.xml.transform.stream.StreamSource;
 
-/** Застосовує XSL-таблицю стилів до XML-файлу та записує результат у файл. */
+// Застосовує XSL-таблицю стилів до XML-файлу та записує результат у файл
 public class XslTransformer {
 
     private static final Logger LOG = Logger.getLogger(XslTransformer.class.getName());

@@ -3,11 +3,11 @@ package travel.parser;
 import java.io.InputStream;
 import java.util.HashMap;
 import java.util.Map;
+
 import javax.xml.stream.XMLInputFactory;
 import javax.xml.stream.XMLStreamConstants;
 import javax.xml.stream.XMLStreamReader;
 
-/** Розбір за допомогою StAX (курсорний API XMLStreamReader). */
 public class StaxVoucherParser extends AbstractVoucherParser {
 
     @Override

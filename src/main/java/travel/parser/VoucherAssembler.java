@@ -4,6 +4,7 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+
 import travel.model.Agency;
 import travel.model.Cost;
 import travel.model.CurrencyCode;
@@ -16,7 +17,6 @@ import travel.model.VoucherCatalog;
 import travel.model.VoucherType;
 import travel.util.EnumParser;
 
-/** Будує об'єкти моделі з потоку подій {@link VoucherEventHandler}. */
 public class VoucherAssembler implements VoucherEventHandler {
 
     private String title;
@@ -99,7 +99,6 @@ public class VoucherAssembler implements VoucherEventHandler {
         return new VoucherCatalog(title, List.copyOf(agencies), List.copyOf(vouchers));
     }
 
-    /** xs:boolean допускає true/false та 1/0. */
     private static boolean parseBoolean(String text) {
         return "true".equals(text) || "1".equals(text);
     }

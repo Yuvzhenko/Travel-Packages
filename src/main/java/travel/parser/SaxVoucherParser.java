@@ -3,12 +3,13 @@ package travel.parser;
 import java.io.InputStream;
 import java.util.HashMap;
 import java.util.Map;
+
 import javax.xml.XMLConstants;
 import javax.xml.parsers.SAXParserFactory;
+
 import org.xml.sax.Attributes;
 import org.xml.sax.helpers.DefaultHandler;
 
-/** Розбір за допомогою SAX. */
 public class SaxVoucherParser extends AbstractVoucherParser {
 
     @Override
@@ -19,7 +20,7 @@ public class SaxVoucherParser extends AbstractVoucherParser {
         factory.newSAXParser().parse(in, new Adapter(handler));
     }
 
-    /** Перетворює SAX-колбеки на події {@link VoucherEventHandler}. */
+    // Перетворює SAX-колбеки на події
     private static final class Adapter extends DefaultHandler {
         private final VoucherEventHandler handler;
         private final StringBuilder text = new StringBuilder();

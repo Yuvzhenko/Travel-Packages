@@ -11,9 +11,9 @@ import java.nio.file.Path;
 public final class TestFiles {
 
     public static final Path SAMPLE = Path.of("src/test/resources/sample.xml");
-    public static final Path XSD = Path.of("data/Travel.xsd");
-    public static final Path XSL = Path.of("data/group-by-type.xsl");
-    public static final Path REAL_XML = Path.of("data/Travel.xml");
+    public static final Path XSD = Path.of("XML/Travel.xsd");
+    public static final Path XSL = Path.of("XML/group-by-type.xsl");
+    public static final Path REAL_XML = Path.of("XML/Travel.xml");
 
     private TestFiles() { }
 
